@@ -1,0 +1,173 @@
+/* Lineup Section - Estilo Rock in Rio com gradiente e textura */
+.lineup-section {
+  position: relative;
+  width: 100%;
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+.lineup-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.lineup-bg-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Overlay com gradiente (passando por branco) + textura */
+.lineup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg, 
+    rgba(234, 161, 148, 0.1), 
+    rgba(255, 255, 255, 0.1),   /* branco no meio */
+    rgba(255, 223, 202, 0.1)
+  );
+  z-index: 1;
+}
+
+/* Textura "chiada" (ruído) sobre o gradiente */
+.lineup-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Textura SVG de ruído fractal */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.15'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  opacity: 0.2; /* Ajuste a intensidade da textura */
+  pointer-events: none;
+  mix-blend-mode: overlay; /* Pode ser multiply, screen, etc. */
+  z-index: 2;
+}
+
+.lineup-section .container {
+  position: relative;
+  z-index: 3; /* Acima do overlay */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.lineup-title {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 3rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  position: relative;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5); /* Sombra para destacar */
+}
+
+.lineup-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #eaa194, #ffdfca);
+  margin: 1rem auto 0;
+}
+
+.lineup-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  text-align: center;
+}
+
+.lineup-day {
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6); /* Sombra no texto para legibilidade */
+}
+
+.day-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #935431;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.stage-name {
+  font-size: 1.1rem;
+  color: #935431;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.artists-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.artist-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #632626;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+  cursor: default;
+  line-height: 1.4;
+  display: inline-block;
+  padding: 0.1rem 0;
+}
+
+.artist-name:hover {
+  color: #eaa194;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .lineup-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .lineup-title {
+    font-size: 2.5rem;
+  }
+
+  .day-title {
+    font-size: 1.8rem;
+  }
+
+  .stage-name {
+    font-size: 1rem;
+  }
+
+  .artist-name {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lineup-section {
+    padding: 3rem 0;
+  }
+
+  .lineup-title {
+    font-size: 2rem;
+  }
+
+  .artist-name {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,309 @@
+/* =========================================
+   SEÇÃO PRINCIPAL E FUNDO
+   ========================================= */
+.ag-section {
+  padding: 5rem 0;
+  background: #fbf5f2; /* Fundo bege/pêssego muito claro */
+}
+
+.ag-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* =========================================
+   CABEÇALHO DA SEÇÃO
+   ========================================= */
+.ag-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.ag-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #4a1c1c; /* Marrom escuro do logo */
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.ag-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #e07a4f, #e9a74e);
+  border-radius: 4px;
+}
+
+.ag-subtitle {
+  font-size: 1.1rem;
+  color: #6b4c44;
+  font-weight: 500;
+  margin-top: 1.2rem;
+}
+
+/* =========================================
+   GRID DE DIAS (Lado a lado no PC)
+   ========================================= */
+.ag-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+/* =========================================
+   CARD DE CADA DIA
+   ========================================= */
+.ag-card {
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px -10px rgba(74, 28, 28, 0.08);
+  border: 1px solid rgba(160, 82, 58, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.ag-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px -12px rgba(74, 28, 28, 0.15);
+}
+
+/* =========================================
+   CABEÇALHO DO CARD (Dia 16 e Dia 17)
+   ========================================= */
+.ag-card-header {
+  padding: 1.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  color: #fff;
+}
+
+.ag-header-day1 {
+  background: linear-gradient(135deg, #a0523a 0%, #4a1c1c 100%);
+}
+
+.ag-header-day2 {
+  background: linear-gradient(135deg, #e07a4f 0%, #a0523a 100%);
+}
+
+.ag-day-info {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  z-index: 2;
+}
+
+.ag-day-number {
+  font-size: 2.4rem;
+  font-weight: 900;
+  opacity: 0.8;
+  letter-spacing: -1px;
+  color: #e9a74e; /* Dourado */
+}
+
+.ag-day-text h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0 0 2px 0;
+  line-height: 1;
+}
+
+.ag-day-text span {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+/* Elemento decorativo no canto */
+.ag-corner-art {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+
+
+/* =========================================
+   LISTA DE ARTISTAS (Linha do Tempo)
+   ========================================= */
+.ag-list {
+  padding: 1.5rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ag-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(160, 82, 58, 0.06);
+  position: relative;
+}
+
+.ag-item:last-child {
+  border-bottom: none;
+}
+
+/* Coluna do Horário (com linha guia) */
+.ag-time-col {
+  display: flex;
+  align-items: center;
+  min-width: 80px;
+  position: relative;
+}
+
+.ag-time {
+  font-weight: 800;
+  color: #4a1c1c;
+  font-size: 0.9rem;
+  background: #f5edea;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  z-index: 2;
+  width: 65px;
+  text-align: center;
+}
+
+/* Linha divisória que conecta os horários */
+.ag-line {
+  position: absolute;
+  left: 65px;
+  top: 50%;
+  width: 15px;
+  height: 2px;
+  background: #e07a4f;
+  transform: translateY(-50%);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+/* Coluna do Artista */
+.ag-artist-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.5rem; /* Espaço após a linha guia */
+}
+
+.ag-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #4a1c1c;
+  margin: 0 0 2px 0;
+  line-height: 1.2;
+}
+
+.ag-stage {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #a0523a;
+  opacity: 0.7;
+}
+
+/* =========================================
+   DESTAQUE DO ARTISTA SURPRESA
+   ========================================= */
+.ag-special {
+  background: rgba(233, 167, 78, 0.04);
+  border-radius: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-left: 3px solid #e9a74e;
+}
+
+.ag-special .ag-name {
+  color: #a0523a;
+}
+
+.ag-badge-container {
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+
+.ag-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #e9a74e, #e07a4f);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 900;
+  padding: 0.3rem 0.8rem;
+  border-radius: 40px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(233, 167, 78, 0.4);
+}
+
+/* =========================================
+   RODAPÉ DA SEÇÃO
+   ========================================= */
+.ag-footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b4c44;
+  border-top: 1px solid rgba(160, 82, 58, 0.1);
+  padding-top: 2rem;
+}
+
+.ag-footer span {
+  background: #ffffff;
+  padding: 0.4rem 1.5rem;
+  border-radius: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  display: inline-block;
+}
+
+/* =========================================
+   RESPONSIVIDADE (TELEMÓVEL E TABLET)
+   ========================================= */
+@media (max-width: 900px) {
+  .ag-grid {
+    grid-template-columns: 1fr; /* Empilha os dias no telemóvel */
+    gap: 2rem;
+  }
+  
+  .ag-title {
+    font-size: 2.2rem;
+  }
+
+  .ag-time-col {
+    min-width: 70px;
+  }
+  
+  .ag-time {
+    width: 55px;
+    font-size: 0.8rem;
+  }
+
+  .ag-line {
+    left: 55px;
+    width: 10px;
+  }
+
+  .ag-artist-col {
+    padding-left: 1rem;
+  }
+
+  .ag-name {
+    font-size: 1rem;
+  }
+}
