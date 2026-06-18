@@ -7,14 +7,14 @@ const ticketTypes = [
     id: 'relvado',
     title: 'Relvado',
     image: '/relvado.png',
-    price: 89,
+    price: 60,
     badge: '',
     features: ['Acesso a 1 dia do festival'],
   },
   {
     id: 'comfort',
     title: 'Golden',
-    image: '/comfort.jpg',
+    image: '/golden.jpg',
     price: 179,
     badge: 'Novo',
     features: [
@@ -28,7 +28,7 @@ const ticketTypes = [
     id: 'vip',
     title: 'VIP',
     image: '/vip.jpg',
-    price: 380,
+    price: 115,
     badge: 'Melhor Experiência',
     features: [
       'Acesso a 1 dia do festival na área VIP',
@@ -41,8 +41,8 @@ const ticketTypes = [
   {
     id: 'premium',
     title: 'Mobilidade Reduzida',
-    image: '/premium.jpg',
-    price: 7380,
+    image: '/mobilidade.jpg',
+    price: 150,
     badge: '',
     features: [
       '10 bilhetes para acesso ao festival num camarote',
