@@ -13,21 +13,18 @@ const ticketTypes = [
   },
   {
     id: 'comfort',
-    title: 'Golden',
-    image: '/golden.png',
-    price: 179,
+    title: 'Relvado',
+    image: '/relvado.png',
+    price: 60,
     badge: 'Novo',
     features: [
-      'Acesso a 1 dia do festival na área Comfort Zone',
-      'Bar e zona de comida exclusivos',
-      'WC exclusivo',
-      'Vista para o palco',
+      'Acesso a 2 dia do festival'
     ],
   },
   {
     id: 'vip',
     title: 'VIP',
-    image: '/vip.jpg',
+    image: '/golden.jpg',
     price: 115,
     badge: 'Melhor Experiência',
     features: [

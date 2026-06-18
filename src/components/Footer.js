@@ -99,7 +99,7 @@ export default function Footer() {
       <footer className="ft-wrapper">
         <div className="ft-container">
           <p className="ft-text">
-            © 2026 Ritmo Fest · Todos os direitos reservados · Festival realizado em Lisboa
+            © 2027 Ritmo Fest · Todos os direitos reservados · Festival realizado em Lisboa
           </p>
           <p className="ft-subtext">
             Venda oficial de bilhetes · Suporte: bilheteira@ritmofest.pt
