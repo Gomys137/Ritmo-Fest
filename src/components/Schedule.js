@@ -3,7 +3,7 @@
 const scheduleData = [
   {
     day: 'Dia 16',
-    subtitle: 'Sexta-feira',
+    subtitle: 'Quarta-feira',
     artists: [
       { time: '16:00', artist: 'DJ Diego Miranda', stage: 'Abertura' },
       { time: '18:00', artist: 'Tony Carreira', stage: 'Palco Principal' },
@@ -15,7 +15,7 @@ const scheduleData = [
   },
   {
     day: 'Dia 17',
-    subtitle: 'Sábado',
+    subtitle: 'Quinta-feira',
     artists: [
       { time: '16:00', artist: 'DJ Limacoxo', stage: 'Abertura' },
       { time: '18:00', artist: 'Carminho', stage: 'Palco Principal' },

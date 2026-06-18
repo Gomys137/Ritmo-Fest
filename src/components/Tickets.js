@@ -11,20 +11,11 @@ const ticketTypes = [
     badge: '',
     features: ['Acesso a 1 dia do festival'],
   },
-  {
-    id: 'comfort',
-    title: 'Relvado',
-    image: '/relvado.png',
-    price: 60,
-    badge: 'Novo',
-    features: [
-      'Acesso a 2 dia do festival'
-    ],
-  },
+ 
   {
     id: 'vip',
     title: 'VIP',
-    image: '/golden.jpg',
+    image: '/golden.png',
     price: 115,
     badge: 'Melhor Experiência',
     features: [
@@ -130,7 +121,7 @@ export default function Tickets() {
                         increase(ticket.id);
                       }}
                     >
-                      Entrada de 2 dias - € {(ticket.price * 1.75).toFixed(2)}
+                      Entrada de 2 dias - € {(ticket.price * 1.85).toFixed(2)}
                     </button>
 
                     <button
