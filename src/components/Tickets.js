@@ -14,7 +14,7 @@ const ticketTypes = [
   {
     id: 'comfort',
     title: 'Golden',
-    image: '/golden.jpg',
+    image: '/golden.png',
     price: 179,
     badge: 'Novo',
     features: [
@@ -41,7 +41,7 @@ const ticketTypes = [
   {
     id: 'premium',
     title: 'Mobilidade Reduzida',
-    image: '/mobilidade.jpg',
+    image: '/reduzida.png',
     price: 150,
     badge: '',
     features: [
