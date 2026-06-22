@@ -17,7 +17,7 @@ const scheduleData = [
     day: 'Dia 17',
     subtitle: 'Quinta-feira',
     artists: [
-      { time: '16:00', artist: 'DJ Limacoxo', stage: 'Abertura' },
+      { time: '16:00', artist: 'DJ Limacoox', stage: 'Abertura' },
       { time: '18:00', artist: 'Carminho', stage: 'Palco Principal' },
       { time: '19:00', artist: 'Ivandro', stage: 'Palco Principal' },
       { time: '20:00', artist: 'Yasmine', stage: 'Palco Principal' },
